@@ -1,0 +1,589 @@
+/* Website Stytle Setting */
+/* ===Melbourne Watch Gallery Page=== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+
+/* Navbar */
+.navbar{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid #e5e5e5;
+
+  padding:2px 14px;
+}
+
+.navbar-brand h5{
+  font-size:15px;
+  font-weight:600;
+  margin:0;
+}
+
+.nav-link h5{
+  font-size:14px;
+  font-weight:500;
+  margin:0;
+}
+
+.navbar .container-fluid{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.navbar .form-control{
+  height:42px;
+  font-size:18px;
+}
+
+.navbar .btn{
+  height:42px;
+  padding:0 18px;
+}
+
+.nav-link:hover {
+  color: #0071e3 ;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  padding: 14px 20px;
+
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: relative;
+}
+
+/* gold line */
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #c6a15b,
+    #e6c97a
+  );
+}
+
+/* hover */
+.header:hover {
+  background-color: #0a0a0a;
+  transition: 0.3s ease;
+}
+
+/* logo */
+.logo {
+  width: 48px;
+  height: auto;
+  filter: brightness(1.2);
+}
+
+/* title */
+.site-title {
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  margin: 0;
+}
+
+.site-title:hover {
+  color: #e6c97a;
+}
+
+/* Main layout */
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+
+  gap: 18px;
+
+  max-width: 1600px;
+  margin: 0 auto;
+
+  padding: 16px 20px;
+}
+
+/* Product grid */
+.product_container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+/* Product card */
+.product{
+  background:#fff;
+  border:none;
+  border-radius:22px;
+  padding:16px;
+  height:270px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow:0 6px 24px rgba(0,0,0,0.08);
+  transition:transform 0.25s ease,box-shadow 0.25s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.product a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  color:#1d1d1f;
+  flex:1;
+}
+
+.product h2{
+  width:100%;
+  font-size:clamp(15px,1vw,20px);
+  font-weight:700;
+  line-height:1.2;
+  min-height:42px;
+  margin-bottom:8px;
+}
+
+.product img{
+  width:clamp(110px,12vw,150px);
+  height:clamp(110px,12vw,150px);
+  object-fit:contain;
+  display:block;
+  margin:auto;
+}
+
+/* Price + button */
+.product_info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+}
+
+.product_info h2{
+  min-height:auto;
+  font-size:clamp(14px,0.9vw,18px);
+  margin:0;
+}
+
+.product_info h2::before {
+  content: "From ";
+}
+
+.product_info button{
+  background:#0071e3;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:7px 16px;
+  font-size:13px;
+  font-weight:500;
+  min-width:100px;
+  height:36px;
+  white-space:nowrap;
+}
+
+.product_info button:hover {
+  background: #0077ed ;
+}
+
+/* Melbourne Watch Gallery Page- Shopping cart */
+.shopping_cart {
+  background: #fff;
+  border: none;
+  border-radius: 24px;
+
+  padding: 18px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  height: fit-content;
+
+  position: sticky;
+
+  top: 70px;
+}
+
+.shopping_cart img{
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #f5f5f7;
+    padding: 4px;
+}
+
+.cart_title{
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.cart_title h2{
+  font-size:18px;
+  font-weight:700;
+}
+
+.total_row h2{
+  font-size:18px;
+}
+
+.cart_item{
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    align-items: start;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart_item h2{
+  font-size:11px;
+  font-weight:600;
+  line-height:1.3;
+  margin:0;
+}
+
+.cart_item button{
+  background:#6e6e73;
+  border:none;
+  border-radius:999px;
+  color:white;
+  font-size:10px;
+  font-weight:500;
+  width:54px;
+  height:24px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:6px;
+}
+
+.cart_item button:hover{
+    background: #4f4f53 ;
+}
+
+.total_row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.shopping_cart button{
+  width:100%;
+  background:#0071e3;
+  border:none;
+  border-radius:999px;
+  font-size:13px;
+  padding:8px 14px;
+  height:40px;
+}
+
+
+/* Responsive */
+@media screen and (max-width:1200px){
+  .main_container{
+    grid-template-columns:1fr;
+  }
+
+  .shopping_cart{
+    position:static;
+  }
+
+  .product_container{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media screen and (max-width:900px){
+  .product_container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width:650px){
+  .product_container{
+    grid-template-columns:1fr;
+  }
+
+  .product{
+    height:auto;
+  }
+
+  .site-title{
+    font-size:28px;
+  }
+}
+
+/* ===About Us Page=== */
+.about-section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:30px 40px;
+  background:#fff;
+}
+
+.about-section h1{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:18px;
+  color:#111;
+}
+
+.about-intro{
+  font-size:15px;
+  line-height:1.5;
+  font-weight:500;
+  margin-bottom:22px;
+  color:#111;
+}
+
+.about-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.about-text p{
+  font-size:13px;
+  line-height:1.6;
+  margin-bottom:16px;
+  color:#111;
+}
+
+.about-image img{
+  width:100%;
+  max-height:340px;
+  object-fit:cover;
+  border-radius:16px;
+  background:#f5f5f7;
+  padding:6px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 35px 22px;
+  }
+
+  .about-section h1 {
+    font-size: 34px;
+  }
+
+  .about-intro {
+    font-size: 19px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===LOGIN PAGE=== */
+.login-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+  background:#f5f5f7;
+}
+
+.login{
+  width:100%;
+  max-width:500px;
+  background:white;
+  padding:40px;
+  border-radius:24px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.login-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:28px;
+  color:#1d1d1f;
+}
+
+/* label */
+.form-label{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:#1d1d1f;
+}
+
+/* input */
+.form-control{
+  height:54px;
+  font-size:18px;
+  border-radius:16px;
+  border:1px solid #d2d2d7;
+  background:#fbfbfd;
+  padding-left:18px;
+  color:#1d1d1f;
+}
+
+.form-control::placeholder{
+  font-size:16px;
+}
+
+.form-control:focus {
+  border-color: #0071e3 ;
+
+  box-shadow: 0 0 0 4px rgba(0,113,227,0.15) ;
+}
+
+input {
+  font-size: 24px;
+}
+
+/* login button */
+.login button{
+  width:100%;
+  height:54px;
+  border-radius:999px;
+  border:none;
+  background:#0071e3;
+  font-size:18px;
+  font-weight:600;
+  margin-top:10px;
+}
+
+.login button:hover {
+  background: #0077ed ;
+}
+
+/* ===PRODUCT DETAIL PAGE=== */
+.product_detail_container{
+  display:grid;
+  grid-template-columns:0.8fr 1.1fr;
+  gap:18px;
+}
+
+.product_detail_image,
+.product_detail_info{
+  background:#fff;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.main_image{
+  width:100%;
+  height:250px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+
+.thumbnail_images{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:10px;
+}
+
+.thumbnail_images img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border:1px solid #d2d2d7;
+  border-radius:12px;
+  padding:4px;
+  background:#f5f5f7;
+}
+
+.thumbnail_images img:hover {
+  border-color: #0071e3;
+  transform: scale(1.05);
+}
+
+.product_detail_info h2{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.product_detail_info h3{
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.product_price{
+  font-size:18px;
+  margin-bottom:12px;
+}
+
+.product_detail_info button{
+  background:#0071e3;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:8px 18px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:14px;
+  min-width:120px;
+  height:44px;
+  transition:0.2s;
+}
+
+.product_detail_info button:hover{
+  background:#0077ed;
+  transform:translateY(-2px);
+}
+
+.product_overview{
+  font-size:16px;
+  margin-top:12px;
+  padding-top:12px;
+}
+
+.product_detail_info p{
+  font-size:12px;
+  line-height:1.5;
+  margin-bottom:8px;
+}
+
+/* Product detail mobile */
+@media screen and (max-width: 900px) {
+  .product_detail_container {
+    grid-template-columns: 1fr;
+  }
+
+  .main_image {
+    height: 320px;
+  }  
+
+  .product_detail_info h2 {
+    font-size: 42px;
+  }
+}

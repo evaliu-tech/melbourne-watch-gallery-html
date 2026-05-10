@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom CSS and JavaScript -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  <script src="../assets/js/project.js"></script>
+
+  <title>Melbourne Watch Gallery</title>
+</head>
+<body onload="display_shoppingcart()">
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">Melbourne Watch Gallery</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+
+        <!-- Search box only for UI display -->
+        <div class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <img
+      class="logo"
+      src="https://th.bing.com/th/id/OIP.VhJAXMCE6eyDWvqXVnDrrwAAAA?w=129&h=169&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+      alt="Melbourne Watch Gallery Logo"
+    />
+    <h1 class="site-title">Melbourne Watch Gallery</h1>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="main_container">
+
+    <!-- Product Detail -->
+    <div class="product_detail_container">
+      <div class="product_detail_image">
+        <img
+          class="main_image"
+          src="https://www.jbhifi.com.au/cdn/shop/products/662950-Product-0-I-638301827403914406_25a6ad2b-da96-49d6-b6fe-62638f6326d2.jpg?v=1694587338"
+          alt="Apple Watch Ultra 2 Ocean Band"
+        />
+
+        <div class="thumbnail_images">
+          <img
+            onmouseover="change_image(this)"
+            src="https://www.jbhifi.com.au/cdn/shop/files/835986-Product-0-I-638930665804648941.jpg?v=1757469845"
+            alt="Apple Watch Ultra front view"
+          />
+          <img
+            onmouseover="change_image(this)"
+            src="https://www.jbhifi.com.au/cdn/shop/files/835986-Product-2-I-638930665805156541.jpg?v=1757469845"
+            alt="Apple Watch Ultra side view"
+          />
+          <img
+            onmouseover="change_image(this)"
+            src="https://www.jbhifi.com.au/cdn/shop/files/835986-Product-4-I-638930665804459265.jpg?v=1757469845"
+            alt="Apple Watch Ultra display view"
+          />
+          <img
+            onmouseover="change_image(this)"
+            src="https://www.jbhifi.com.au/cdn/shop/files/835986-Product-6-I-638930665805834554.jpg?v=1757469845"
+            alt="Apple Watch Ultra back view"
+          />
+        </div>
+      </div>
+
+      <div class="product_detail_info">
+        <h2>Apple Watch Ultra 2 49mm Titanium Case GPS + Cellular Ocean Band (Blue)</h2>
+        <h3>Model: MEWH4X/A</h3>
+        <h2 class="product_price">$<span>1399</span></h2>
+        <button onclick="add_item2(this)" class="btn btn-info">Add to cart</button>
+
+        <h2 class="product_overview">Product Overview</h2>
+        <p>
+          Apple Watch Ultra features built-in satellite communications, multiday battery life and the largest, brightest display in an Apple Watch. It also delivers advanced metrics, Custom Workouts, dual-frequency GPS, and valuable health insights like high- and low-heart-rate notifications and sleep score.
+        </p>
+        <p>
+          Rugged and Ready to Go: The ultimate sports and adventure watch is built to last with a tough titanium case and a strong sapphire crystal display. It is water-resistant to 100 metres, making it suitable for swimming, diving and high-speed water sports.
+        </p>
+        <p>
+          Bright, Beautiful Display: A large and advanced display that emits more light at wider angles, making it brighter and easier to read. You can also use the display as a torch.
+        </p>
+      </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="shopping_cart">
+      <div class="cart_title">
+        <h2>Shopping Cart</h2>
+      </div>
+
+      <div id="shopping_container"></div>
+
+      <div class="total_row">
+        <h2>Total</h2>
+        <h2 id="total"></h2>
+      </div>
+
+      <button class="btn btn-success">
+        Check out
+        <span id="item_count" class="badge text-bg-secondary">0</span>
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
