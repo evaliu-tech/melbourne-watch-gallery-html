@@ -67,8 +67,6 @@ This project was created to demonstrate front-end web development skills, includ
 
 ![Home Page](assets/screenshots/home.png)
 
-![Login Page](assets/screenshots/login.png)
-
 ### Shopping Cart
 
 ![Shopping Cart](assets/screenshots/cart.png)
@@ -83,6 +81,7 @@ This project was created to demonstrate front-end web development skills, includ
 
 ### Login Page
 
+![Login Page](assets/screenshots/login.png)
 
 ---
 
